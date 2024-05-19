@@ -9,28 +9,40 @@ import SwiftUI
 
 struct ContentView: View {
 
-	@State private var mountPoints: [String] = []
+	@State private var mountPoints: [URL] = []
 
 	var body: some View {
-		List(["yes","no","maybe"], id: \.self) { mountPoint in
-			Text(mountPoint)
-		}.onAppear(perform: getMountPoints)
+		NavigationStack {
+			Section {
+				List(mountPoints, id: \.self) { mountPoint in
+					Text(mountPoint.path)
+				}.onAppear(perform: getMountPoints)
+			}.navigationTitle("Volumes")
+		}
     }
 
+	func mountPoints(_ statBufs: UnsafePointer<statfs>, _ fsCount: Int) -> [URL] {
+		var urls: [URL] = []
+
+		for fsIndex in 0..<fsCount {
+			var fs = statBufs.advanced(by: fsIndex).pointee
+
+			let mountPoint = withUnsafePointer(to: &fs.f_mntonname.0) { (ptr: UnsafePointer<Int8>) -> String in
+				return FileManager.default.string(withFileSystemRepresentation: ptr, length: strlen(ptr))
+			}
+			urls.append(URL(fileURLWithPath: mountPoint, isDirectory: true))
+		}
+		return urls
+	}
+
 	func getMountPoints() {
-		let keys: [URLResourceKey] = [
-			.volumeNameKey,
-			.volumeIsRemovableKey,
-			.volumeIsEjectableKey,
-			.volumeAvailableCapacityKey,
-			.volumeTotalCapacityKey,
-			.volumeUUIDStringKey,
-			.volumeIsBrowsableKey,
-			.volumeIsLocalKey,
-			.isVolumeKey,
-		]
-		let mountPoints = FileManager.default.mountedVolumeURLs(includingResourceValuesForKeys: keys)
-		print("getMountPoints: There are \(mountPoints?.count ?? 0) lights!")
+		var statBufPtr: UnsafeMutablePointer<statfs>?
+		let fsCount = getmntinfo_r_np(&statBufPtr, MNT_WAIT)
+		guard let statBuf = statBufPtr, fsCount > 0 else {
+			return
+		}
+		mountPoints = mountPoints(statBuf, Int(fsCount))
+		print("getMountPoints: There are \(fsCount) lights!")
 		return
 	}
 }
