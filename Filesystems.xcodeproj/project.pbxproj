@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		458EE59C2BF9A0DC001CCE3E /* VolumeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EE59B2BF9A0DC001CCE3E /* VolumeDetail.swift */; };
+		458EE59E2BF9A705001CCE3E /* VolumeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EE59D2BF9A705001CCE3E /* VolumeRow.swift */; };
 		45F7D37C2BF69F9D00C2A9B1 /* FilesystemsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F7D37B2BF69F9D00C2A9B1 /* FilesystemsApp.swift */; };
 		45F7D37E2BF69F9D00C2A9B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F7D37D2BF69F9D00C2A9B1 /* ContentView.swift */; };
 		45F7D3802BF69FA000C2A9B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45F7D37F2BF69FA000C2A9B1 /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		458EE59B2BF9A0DC001CCE3E /* VolumeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeDetail.swift; sourceTree = "<group>"; };
+		458EE59D2BF9A705001CCE3E /* VolumeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeRow.swift; sourceTree = "<group>"; };
 		45F7D3782BF69F9D00C2A9B1 /* Filesystems.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Filesystems.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45F7D37B2BF69F9D00C2A9B1 /* FilesystemsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesystemsApp.swift; sourceTree = "<group>"; };
 		45F7D37D2BF69F9D00C2A9B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +58,8 @@
 			children = (
 				45F7D37B2BF69F9D00C2A9B1 /* FilesystemsApp.swift */,
 				45F7D37D2BF69F9D00C2A9B1 /* ContentView.swift */,
+				458EE59B2BF9A0DC001CCE3E /* VolumeDetail.swift */,
+				458EE59D2BF9A705001CCE3E /* VolumeRow.swift */,
 				45F7D37F2BF69FA000C2A9B1 /* Assets.xcassets */,
 				45F7D3812BF69FA000C2A9B1 /* Filesystems.entitlements */,
 				45F7D3822BF69FA000C2A9B1 /* Preview Content */,
@@ -97,7 +103,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1530;
-				LastUpgradeCheck = 1530;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					45F7D3772BF69F9D00C2A9B1 = {
 						CreatedOnToolsVersion = 15.3;
@@ -141,6 +147,8 @@
 			files = (
 				45F7D37E2BF69F9D00C2A9B1 /* ContentView.swift in Sources */,
 				45F7D37C2BF69F9D00C2A9B1 /* FilesystemsApp.swift in Sources */,
+				458EE59E2BF9A705001CCE3E /* VolumeRow.swift in Sources */,
+				458EE59C2BF9A0DC001CCE3E /* VolumeDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +189,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -242,6 +251,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -269,6 +279,7 @@
 				CODE_SIGN_ENTITLEMENTS = Filesystems/Filesystems.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Filesystems/Preview Content\"";
 				DEVELOPMENT_TEAM = H6U8DDWY8N;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -307,6 +318,7 @@
 				CODE_SIGN_ENTITLEMENTS = Filesystems/Filesystems.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Filesystems/Preview Content\"";
 				DEVELOPMENT_TEAM = H6U8DDWY8N;
 				ENABLE_HARDENED_RUNTIME = YES;

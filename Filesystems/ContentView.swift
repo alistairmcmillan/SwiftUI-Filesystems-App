@@ -12,13 +12,15 @@ struct ContentView: View {
 	@State private var mountPoints: [URL] = []
 
 	var body: some View {
-		NavigationStack {
+		NavigationView {
 			Section {
 				List(mountPoints, id: \.self) { mountPoint in
-					Text(mountPoint.path)
-				}.onAppear(perform: getMountPoints)
+					NavigationLink(destination: VolumeDetail(volume: mountPoint)) {
+						Text(mountPoint.path)
+					}
+				}
 			}.navigationTitle("Volumes")
-		}
+		}.onAppear(perform: getMountPoints)
     }
 
 	func mountPoints(_ statBufs: UnsafePointer<statfs>, _ fsCount: Int) -> [URL] {
