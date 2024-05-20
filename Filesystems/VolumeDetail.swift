@@ -40,7 +40,7 @@ struct VolumeDetail: View {
 	}
 	
 	func parseFlags(flags: UInt32) {
-		print(String(flags, radix: 2))
+//		print(String(flags, radix: 2))
 		if(flags & 0b00000000000000000000000000000001 == 1) {
 			flagsText = "read-only"
 		} else {
