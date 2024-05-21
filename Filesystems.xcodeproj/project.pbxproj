@@ -12,7 +12,7 @@
 		45B0971A2BFAD1FA00F44C4D /* WatchFilesystemsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B097192BFAD1FA00F44C4D /* WatchFilesystemsApp.swift */; };
 		45B0971E2BFAD1FC00F44C4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45B0971D2BFAD1FC00F44C4D /* Assets.xcassets */; };
 		45B097212BFAD1FC00F44C4D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45B097202BFAD1FC00F44C4D /* Preview Assets.xcassets */; };
-		45B097242BFAD1FC00F44C4D /* WatchFilesystems Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 45B097172BFAD1FA00F44C4D /* WatchFilesystems Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		45B097242BFAD1FC00F44C4D /* Filesystems.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 45B097172BFAD1FA00F44C4D /* Filesystems.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		45B097292BFADA7C00F44C4D /* VolumeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EE59D2BF9A705001CCE3E /* VolumeRow.swift */; };
 		45B0972A2BFADA8800F44C4D /* VolumeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EE59B2BF9A0DC001CCE3E /* VolumeDetail.swift */; };
 		45B0972B2BFADD8E00F44C4D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F7D37D2BF69F9D00C2A9B1 /* ContentView.swift */; };
@@ -39,7 +39,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				45B097242BFAD1FC00F44C4D /* WatchFilesystems Watch App.app in Embed Watch Content */,
+				45B097242BFAD1FC00F44C4D /* Filesystems.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -49,7 +49,7 @@
 /* Begin PBXFileReference section */
 		458EE59B2BF9A0DC001CCE3E /* VolumeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeDetail.swift; sourceTree = "<group>"; };
 		458EE59D2BF9A705001CCE3E /* VolumeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeRow.swift; sourceTree = "<group>"; };
-		45B097172BFAD1FA00F44C4D /* WatchFilesystems Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchFilesystems Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		45B097172BFAD1FA00F44C4D /* Filesystems.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Filesystems.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45B097192BFAD1FA00F44C4D /* WatchFilesystemsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchFilesystemsApp.swift; sourceTree = "<group>"; };
 		45B0971D2BFAD1FC00F44C4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45B097202BFAD1FC00F44C4D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -110,7 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				45F7D3782BF69F9D00C2A9B1 /* Filesystems.app */,
-				45B097172BFAD1FA00F44C4D /* WatchFilesystems Watch App.app */,
+				45B097172BFAD1FA00F44C4D /* Filesystems.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,7 +154,7 @@
 			);
 			name = "WatchFilesystems Watch App";
 			productName = "WatchFilesystems Watch App";
-			productReference = 45B097172BFAD1FA00F44C4D /* WatchFilesystems Watch App.app */;
+			productReference = 45B097172BFAD1FA00F44C4D /* Filesystems.app */;
 			productType = "com.apple.product-type.application";
 		};
 		45F7D3772BF69F9D00C2A9B1 /* Filesystems */ = {
@@ -279,7 +279,6 @@
 				DEVELOPMENT_TEAM = H6U8DDWY8N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = WatchFilesystems;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = cx.mcmillan.Filesystems;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -288,7 +287,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = cx.mcmillan.Filesystems.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Filesystems;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -309,7 +308,6 @@
 				DEVELOPMENT_TEAM = H6U8DDWY8N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = WatchFilesystems;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = cx.mcmillan.Filesystems;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -318,7 +316,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = cx.mcmillan.Filesystems.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Filesystems;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;

@@ -19,7 +19,7 @@ struct ContentView: View {
 						Text(mountPoint.path)
 					}
 				}
-			}.navigationTitle("Volumes")
+			}.navigationTitle("Filesystems")
 		}.onAppear(perform: getMountPoints)
     }
 
