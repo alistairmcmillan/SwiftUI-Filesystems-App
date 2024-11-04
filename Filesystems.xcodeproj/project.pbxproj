@@ -12,7 +12,7 @@
 		45B0971A2BFAD1FA00F44C4D /* WatchFilesystemsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B097192BFAD1FA00F44C4D /* WatchFilesystemsApp.swift */; };
 		45B0971E2BFAD1FC00F44C4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45B0971D2BFAD1FC00F44C4D /* Assets.xcassets */; };
 		45B097212BFAD1FC00F44C4D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45B097202BFAD1FC00F44C4D /* Preview Assets.xcassets */; };
-		45B097242BFAD1FC00F44C4D /* Filesystems.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 45B097172BFAD1FA00F44C4D /* Filesystems.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		45B097242BFAD1FC00F44C4D /* Filesystems.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 45B097172BFAD1FA00F44C4D /* Filesystems.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		45B097292BFADA7C00F44C4D /* VolumeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EE59D2BF9A705001CCE3E /* VolumeRow.swift */; };
 		45B0972A2BFADA8800F44C4D /* VolumeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EE59B2BF9A0DC001CCE3E /* VolumeDetail.swift */; };
 		45B0972B2BFADD8E00F44C4D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F7D37D2BF69F9D00C2A9B1 /* ContentView.swift */; };
@@ -262,7 +262,6 @@
 /* Begin PBXTargetDependency section */
 		45B097232BFAD1FC00F44C4D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			platformFilter = ios;
 			target = 45B097162BFAD1FA00F44C4D /* WatchFilesystems Watch App */;
 			targetProxy = 45B097222BFAD1FC00F44C4D /* PBXContainerItemProxy */;
 		};
@@ -477,10 +476,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cx.mcmillan.Filesystems;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,3";
 			};
 			name = Debug;
 		};
@@ -517,10 +517,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cx.mcmillan.Filesystems;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,3";
 			};
 			name = Release;
 		};
